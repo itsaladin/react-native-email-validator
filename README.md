@@ -1,21 +1,38 @@
-# react-native-email-validator
+# react-native-email-validator 👈👈👈
 
 Validate your email address simply
 
 ## Installation
-
+Using Yarn:
 ```sh
+
+yarn add react-native-email-validator
+
+```
+Using NPM:
+```sh
+
 npm install react-native-email-validator
+
 ```
 
-## Usage
+## Import
 
 ```js
-import { multiply } from 'react-native-email-validator';
+import validate from 'react-native-email-validator';
 
-// ...
+```
+## Check
 
-const result = await multiply(3, 7);
+```js
+  let isValid = validate('alauddin12340@gmail.com');
+  let isValidCheck = validate('alauddin12340gmail.com');';
+```
+
+## Result
+```js
+{isValid ? <Text>Email is valid</Text> : <Text>Email is not valid</Text>}
+
 ```
 
 ## Contributing
