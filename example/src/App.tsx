@@ -6,7 +6,11 @@ export default function App() {
   let isValid = validate('alauddin12340@gmail.com');
   return (
     <View style={styles.container}>
-      {isValid ? <Text>Email is valid</Text> : <Text>Email is not valid</Text>}
+      {isValid ? (
+        <Text style={{ fontSize: 22 }}>Email is valid</Text>
+      ) : (
+        <Text>Email is not valid</Text>
+      )}
     </View>
   );
 }
