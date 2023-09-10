@@ -1,18 +1,12 @@
 import * as React from 'react';
-
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-email-validator';
+import validate from 'react-native-email-validator';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
+  let isValid = validate('alauddin12340@gmail.com');
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      {isValid ? <Text>Email is valid</Text> : <Text>Email is not valid</Text>}
     </View>
   );
 }
